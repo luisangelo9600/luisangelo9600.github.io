@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Login -->
+    <div class="container login-container" id="login-screen">
+        <img src="TriviApp.png" alt="Descripción de la imagen">
+
+        <h1>Bienvenido a TriviApp</h1>
+        <input type="text" id="username" placeholder="Nombre de usuario">
+        <button class="button" onclick="login()">Iniciar sesión</button>
+    </div>
+
+    <!-- Pantalla de selección de categorías -->
+    <div class="container background" id="category-screen" style="display:none;">
+        <h1>Selecciona una Categoría</h1>
+        <div class="categories">
+            <div class="button" onclick="selectCategory('Matemáticas')">Matemáticas</div>
+            <div class="button" onclick="selectCategory('Literatura')">Literatura</div>
+            <div class="button" onclick="selectCategory('Geografía')">Geografía</div>
+            <div class="button" onclick="selectCategory('Ciencias')">Ciencias</div>
+            <div class="button" onclick="selectCategory('Deportes')">Deportes</div>
+            <div class="button" onclick="selectCategory('Historia')">Historia</div>
+            <div class="button" onclick="selectCategory('Música')">Música</div>
+            <div class="button" onclick="selectCategory('Cine')">Cine</div>
+        </div>
+    </div>
+
+    <!-- Pantalla de selección de dificultad -->
+    <div class="container background" id="difficulty-screen" style="display:none;">
+        <h1>Selección de Dificultad</h1>
+        <div class="difficulties">
+            <div class="button" onclick="selectDifficulty('Fácil')">Fácil</div>
+            <div class="button" onclick="selectDifficulty('Medio')">Medio</div>
+            <div class="button" onclick="selectDifficulty('Difícil')">Difícil</div>
+        </div>
+    </div>
+
+    <!-- Pantalla del cuestionario -->
+    <div class="container background" id="quiz-screen" style="display:none;">
+        <h1 id="question"></h1>
+        <h2 id="timer"></h2>
+        <div class="answers" id="answers"></div>
+        <h2 id="current-score">Puntuación: 0</h2>
+    </div>
+
+    <!-- Pantalla de resultados -->
+    <div class="container background" id="results-screen" style="display:none;">
+        <h1>¡QUIZ FINALIZADO!</h1>
+        <p>Tu puntuación es:</p>
+        <div id="score"></div>
+        <button class="button" onclick="ReiniciarQuiz()">Volver a Categorías</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

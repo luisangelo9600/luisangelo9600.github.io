@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilos para la pantalla de login */
+.login-container {
+    background-color: #fff;
+    color: #000;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 300px;
+}
+
+/* Estilos para las otras pantallas */
+.background {
+    background-image: url('TriviApp.png'); /* Reemplaza con la ruta de tu imagen de fondo */
+    background-size: cover; /* Para cubrir toda la pantalla */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    color: #fff; /* Para asegurarnos de que el texto sea visible */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+h1, p {
+    margin-bottom: 20px;
+}
+
+/* Mejoras en los botones */
+.button {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 18px;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.categories, .difficulties, .answers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#score {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #00f260, #0575e6);
+    color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #score {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+}
